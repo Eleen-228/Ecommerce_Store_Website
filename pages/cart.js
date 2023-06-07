@@ -171,8 +171,6 @@ export default function CartPage() {
 				.catch(error => console.log(error))
 		}
 	}, [cart])
-	console.log('PRODUCT', productsOrdered)
-	console.log('CART', cart)
 	let finalPrice = 0
 	productsOrdered.map(({ _id, price }) => {
 		let counts = cart.filter(id => id === _id).length
